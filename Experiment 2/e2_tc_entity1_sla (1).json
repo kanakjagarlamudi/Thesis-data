@@ -1,0 +1,493 @@
+{
+  "id" : "65534ddeadbe1d00085e22d4",
+  "modified" : 1700056110,
+  "name" : "E2_TC_Entity1_SLA",
+  "dataDefinition" : {
+    "id" : "6551da8cadbe1d0008b564df",
+    "modified" : 1700020308,
+    "name" : "E2_SLA",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Service description " : {
+          "properties" : {
+            "Entity" : {
+              "properties" : {
+                "Entity" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Entity",
+                    "name" : "Entity",
+                    "description" : "Type of entity "
+                  }
+                },
+                "Latitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Latitude",
+                    "name" : "Latitude",
+                    "description" : "Latitude of the entity "
+                  }
+                },
+                "Longitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Longitude",
+                    "name" : "Longitude ",
+                    "description" : "Longitude of the entity "
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "Entity",
+                "description" : ""
+              }
+            },
+            "Context attributes " : {
+              "items" : [ {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "Name of the first context attribute"
+                }
+              }, {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "Name of the second context attribute "
+                }
+              } ],
+              "type" : "array",
+              "metadata" : {
+                "position" : "Context attributes ",
+                "description" : ""
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Service description ",
+            "description" : ""
+          }
+        },
+        "QoC and CoC" : {
+          "properties" : {
+            "QoC gaurantees " : {
+              "properties" : {
+                "completeness " : {
+                  "items" : [ {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "1",
+                      "name" : "Ca1",
+                      "description" : "Ca1"
+                    }
+                  }, {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "2",
+                      "name" : "Ca2",
+                      "description" : "Ca2"
+                    }
+                  } ],
+                  "type" : "array",
+                  "metadata" : {
+                    "position" : "completeness ",
+                    "description" : "completeness gautantee"
+                  }
+                },
+                "timeliness" : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "timeliness",
+                    "name" : "timeliness",
+                    "description" : "timeliness guarantee "
+                  }
+                },
+                "Representation" : {
+                  "properties" : {
+                    "Data formats " : {
+                      "items" : [ {
+                        "type" : "string",
+                        "metadata" : {
+                          "position" : "1",
+                          "name" : "Ca1",
+                          "description" : "Ca1"
+                        }
+                      }, {
+                        "type" : "string",
+                        "metadata" : {
+                          "position" : "2",
+                          "name" : "Ca2",
+                          "description" : "Ca2"
+                        }
+                      } ],
+                      "type" : "array",
+                      "metadata" : {
+                        "position" : "Data formats ",
+                        "description" : ""
+                      }
+                    },
+                    "CO" : {
+                      "type" : "string",
+                      "metadata" : {
+                        "position" : "CO",
+                        "name" : "CO",
+                        "description" : "context object format "
+                      }
+                    }
+                  },
+                  "type" : "object",
+                  "metadata" : {
+                    "position" : "Representation",
+                    "description" : "Data representation format guarantee "
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "QoC gaurantees ",
+                "description" : ""
+              }
+            },
+            "CoC guarantees " : {
+              "properties" : {
+                "Cost " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "Cost ",
+                    "name" : "Cost",
+                    "description" : "Context cost "
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "CoC guarantees ",
+                "description" : ""
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC and CoC",
+            "description" : ""
+          }
+        },
+        "Actors" : {
+          "properties" : {
+            "CMP" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "CMP",
+                "name" : "CMP",
+                "description" : "CMP's name"
+              }
+            },
+            "Context Provider" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Context Provider",
+                "name" : "Context Provider",
+                "description" : "Context Provider's name "
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Actors",
+            "description" : ""
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 60
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Service description " : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Service description ",
+            "description" : ""
+          },
+          "properties" : {
+            "Entity" : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "Entity",
+                "description" : ""
+              },
+              "properties" : {
+                "Entity" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Entity",
+                    "name" : "Entity",
+                    "description" : "Type of entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "E1"
+                  }
+                },
+                "Latitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Latitude",
+                    "name" : "Latitude",
+                    "description" : "Latitude of the entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : ":-37.845103"
+                  }
+                },
+                "Longitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Longitude",
+                    "name" : "Longitude ",
+                    "description" : "Longitude of the entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "145.109798"
+                  }
+                }
+              }
+            },
+            "Context attributes " : {
+              "type" : "array",
+              "metadata" : {
+                "position" : "Context attributes ",
+                "description" : ""
+              },
+              "items" : [ {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "Name of the first context attribute"
+                },
+                "rule" : {
+                  "type" : "literal_string",
+                  "value" : "CP(P)"
+                }
+              }, {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "Name of the second context attribute "
+                },
+                "rule" : {
+                  "type" : "literal_string",
+                  "value" : "CP(R)"
+                }
+              } ]
+            }
+          }
+        },
+        "QoC and CoC" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC and CoC",
+            "description" : ""
+          },
+          "properties" : {
+            "QoC gaurantees " : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "QoC gaurantees ",
+                "description" : ""
+              },
+              "properties" : {
+                "completeness " : {
+                  "type" : "array",
+                  "metadata" : {
+                    "position" : "completeness ",
+                    "description" : "completeness gautantee"
+                  },
+                  "items" : [ {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "1",
+                      "name" : "Ca1",
+                      "description" : "Ca1"
+                    },
+                    "rule" : {
+                      "type" : "literal_string",
+                      "value" : "CP(P)"
+                    }
+                  }, {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "2",
+                      "name" : "Ca2",
+                      "description" : "Ca2"
+                    },
+                    "rule" : {
+                      "type" : "literal_string",
+                      "value" : "CP(R)"
+                    }
+                  } ]
+                },
+                "timeliness" : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "timeliness",
+                    "name" : "timeliness",
+                    "description" : "timeliness guarantee "
+                  },
+                  "rule" : {
+                    "type" : "random_integer",
+                    "min" : 0,
+                    "max" : 100
+                  }
+                },
+                "Representation" : {
+                  "type" : "object",
+                  "metadata" : {
+                    "position" : "Representation",
+                    "description" : "Data representation format guarantee "
+                  },
+                  "properties" : {
+                    "Data formats " : {
+                      "type" : "array",
+                      "metadata" : {
+                        "position" : "Data formats ",
+                        "description" : ""
+                      },
+                      "items" : [ {
+                        "type" : "string",
+                        "metadata" : {
+                          "position" : "1",
+                          "name" : "Ca1",
+                          "description" : "Ca1"
+                        },
+                        "rule" : {
+                          "type" : "literal_string",
+                          "value" : "Int"
+                        }
+                      }, {
+                        "type" : "string",
+                        "metadata" : {
+                          "position" : "2",
+                          "name" : "Ca2",
+                          "description" : "Ca2"
+                        },
+                        "rule" : {
+                          "type" : "literal_string",
+                          "value" : "Int"
+                        }
+                      } ]
+                    },
+                    "CO" : {
+                      "type" : "string",
+                      "metadata" : {
+                        "position" : "CO",
+                        "name" : "CO",
+                        "description" : "context object format "
+                      },
+                      "rule" : {
+                        "type" : "literal_string",
+                        "value" : "JSON"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "CoC guarantees " : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "CoC guarantees ",
+                "description" : ""
+              },
+              "properties" : {
+                "Cost " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "Cost ",
+                    "name" : "Cost",
+                    "description" : "Context cost "
+                  },
+                  "rule" : {
+                    "type" : "literal_integer",
+                    "value" : 10
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Actors" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Actors",
+            "description" : ""
+          },
+          "properties" : {
+            "CMP" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "CMP",
+                "name" : "CMP",
+                "description" : "CMP's name"
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "CoaaS"
+              }
+            },
+            "Context Provider" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Context Provider",
+                "name" : "Context Provider",
+                "description" : "Context Provider's name "
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "TC1"
+              }
+            }
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}

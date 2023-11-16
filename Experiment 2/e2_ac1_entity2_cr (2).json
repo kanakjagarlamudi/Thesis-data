@@ -1,0 +1,386 @@
+{
+  "id" : "6552f17aadbe1d00075cad75",
+  "modified" : 1699934985,
+  "name" : "E2_AC1_Entity2_CR",
+  "dataDefinition" : {
+    "id" : "6551e452adbe1d0008b564e0",
+    "modified" : 1699934135,
+    "name" : "E2_CR",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "CC" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CC",
+            "name" : "CC",
+            "description" : "context consumer type "
+          }
+        },
+        "Entity" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "Entity",
+            "name" : "Entity",
+            "description" : "Entity type "
+          }
+        },
+        "QoC requirements " : {
+          "properties" : {
+            "timeliness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "timeliness",
+                "name" : "timeliness",
+                "description" : "timeliness requirement"
+              }
+            },
+            "completeness" : {
+              "items" : [ {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "double",
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "weight of Ca1"
+                }
+              }, {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "double",
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "weight of Ca2"
+                }
+              } ],
+              "type" : "array",
+              "metadata" : {
+                "position" : "completeness",
+                "description" : "completeness requirement"
+              }
+            },
+            "Correctness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "Correctness",
+                "name" : "Correctness",
+                "description" : "accuracy requirement of the context consumer "
+              }
+            },
+            "representation" : {
+              "properties" : {
+                "Data format " : {
+                  "items" : [ {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "1",
+                      "name" : "Ca1",
+                      "description" : "context format 1"
+                    }
+                  }, {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "2",
+                      "name" : "Ca2",
+                      "description" : "context format 2"
+                    }
+                  } ],
+                  "type" : "array",
+                  "metadata" : {
+                    "position" : "Data format ",
+                    "description" : ""
+                  }
+                },
+                "CO" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "CO",
+                    "name" : "CO",
+                    "description" : "context object representation"
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "representation",
+                "description" : "representation requirement"
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC requirements ",
+            "description" : ""
+          }
+        },
+        "latitude" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "latitude",
+            "name" : "latitude",
+            "description" : "latitude of the entity "
+          }
+        },
+        "Ca" : {
+          "items" : [ {
+            "type" : "string",
+            "metadata" : {
+              "position" : "1",
+              "name" : "Ca1",
+              "description" : "context attribute 1"
+            }
+          }, {
+            "type" : "string",
+            "metadata" : {
+              "position" : "2",
+              "name" : "Ca2",
+              "description" : "context attribute 2"
+            }
+          } ],
+          "type" : "array",
+          "metadata" : {
+            "position" : "Ca",
+            "description" : ""
+          }
+        },
+        "longitude" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "longitude",
+            "name" : "longitude ",
+            "description" : "longitude of the entity "
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 60
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "CC" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CC",
+            "name" : "CC",
+            "description" : "context consumer type "
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "AC1"
+          }
+        },
+        "Entity" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "Entity",
+            "name" : "Entity",
+            "description" : "Entity type "
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "E2"
+          }
+        },
+        "QoC requirements " : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC requirements ",
+            "description" : ""
+          },
+          "properties" : {
+            "timeliness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "timeliness",
+                "name" : "timeliness",
+                "description" : "timeliness requirement"
+              },
+              "rule" : {
+                "type" : "literal_integer",
+                "value" : 5
+              }
+            },
+            "completeness" : {
+              "type" : "array",
+              "metadata" : {
+                "position" : "completeness",
+                "description" : "completeness requirement"
+              },
+              "items" : [ {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "double",
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "weight of Ca1"
+                },
+                "rule" : {
+                  "type" : "literal_double",
+                  "value" : 0.3
+                }
+              }, {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "double",
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "weight of Ca2"
+                },
+                "rule" : {
+                  "type" : "literal_double",
+                  "value" : 0.7
+                }
+              } ]
+            },
+            "Correctness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "Correctness",
+                "name" : "Correctness",
+                "description" : "accuracy requirement of the context consumer "
+              },
+              "rule" : {
+                "type" : "literal_integer",
+                "value" : 90
+              }
+            },
+            "representation" : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "representation",
+                "description" : "representation requirement"
+              },
+              "properties" : {
+                "Data format " : {
+                  "type" : "array",
+                  "metadata" : {
+                    "position" : "Data format ",
+                    "description" : ""
+                  },
+                  "items" : [ {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "1",
+                      "name" : "Ca1",
+                      "description" : "context format 1"
+                    },
+                    "rule" : {
+                      "type" : "literal_string",
+                      "value" : "Int"
+                    }
+                  }, {
+                    "type" : "string",
+                    "metadata" : {
+                      "position" : "2",
+                      "name" : "Ca2",
+                      "description" : "context format 2"
+                    },
+                    "rule" : {
+                      "type" : "literal_string",
+                      "value" : "Int"
+                    }
+                  } ]
+                },
+                "CO" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "CO",
+                    "name" : "CO",
+                    "description" : "context object representation"
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "JSON"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "latitude" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "latitude",
+            "name" : "latitude",
+            "description" : "latitude of the entity "
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "-37.845103"
+          }
+        },
+        "Ca" : {
+          "type" : "array",
+          "metadata" : {
+            "position" : "Ca",
+            "description" : ""
+          },
+          "items" : [ {
+            "type" : "string",
+            "metadata" : {
+              "position" : "1",
+              "name" : "Ca1",
+              "description" : "context attribute 1"
+            },
+            "rule" : {
+              "type" : "literal_string",
+              "value" : "CP(P)"
+            }
+          }, {
+            "type" : "string",
+            "metadata" : {
+              "position" : "2",
+              "name" : "Ca2",
+              "description" : "context attribute 2"
+            },
+            "rule" : {
+              "type" : "literal_string",
+              "value" : "CP(R)"
+            }
+          } ]
+        },
+        "longitude" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "longitude",
+            "name" : "longitude ",
+            "description" : "longitude of the entity "
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "145.109798"
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}

@@ -1,0 +1,185 @@
+{
+  "id" : "6554ca62adbe1d000b0ed204",
+  "modified" : 1700055650,
+  "name" : "E2_VC_Entity4_Outcome",
+  "dataDefinition" : {
+    "id" : "6551eaceadbe1d0008b564e1",
+    "modified" : 1699867342,
+    "name" : "E2_Outcomes",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Context attributes " : {
+          "items" : [ {
+            "properties" : {
+              "CP(P)" : {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "integer",
+                  "position" : "CP(P)",
+                  "name" : "CP(P)",
+                  "description" : "Count of people at crossing"
+                }
+              }
+            },
+            "type" : "object",
+            "metadata" : {
+              "position" : "1",
+              "description" : "first context attribute "
+            }
+          }, {
+            "properties" : {
+              "CP(R)" : {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "integer",
+                  "position" : "CP(R)",
+                  "name" : "CP(R)",
+                  "description" : "Count of people waiting"
+                }
+              }
+            },
+            "type" : "object",
+            "metadata" : {
+              "position" : "2",
+              "description" : ""
+            }
+          } ],
+          "type" : "array",
+          "metadata" : {
+            "position" : "Context attributes ",
+            "description" : ""
+          }
+        },
+        "CP" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CP",
+            "name" : "CP",
+            "description" : "Context provider's ID"
+          }
+        },
+        "context_generation_ts" : {
+          "type" : "number",
+          "metadata" : {
+            "format" : "milliseconds",
+            "position" : "context_generation_ts",
+            "name" : "context_generation_ts",
+            "description" : "timestamp ",
+            "type" : "timestamp"
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 50
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Context attributes " : {
+          "type" : "array",
+          "metadata" : {
+            "position" : "Context attributes ",
+            "description" : ""
+          },
+          "items" : [ {
+            "type" : "object",
+            "metadata" : {
+              "position" : "1",
+              "description" : "first context attribute "
+            },
+            "properties" : {
+              "CP(P)" : {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "integer",
+                  "position" : "CP(P)",
+                  "name" : "CP(P)",
+                  "description" : "Count of people at crossing"
+                },
+                "rule" : {
+                  "type" : "random_integer",
+                  "min" : 0,
+                  "max" : 12
+                }
+              }
+            }
+          }, {
+            "type" : "object",
+            "metadata" : {
+              "position" : "2",
+              "description" : ""
+            },
+            "properties" : {
+              "CP(R)" : {
+                "type" : "number",
+                "metadata" : {
+                  "type" : "integer",
+                  "position" : "CP(R)",
+                  "name" : "CP(R)",
+                  "description" : "Count of people waiting"
+                },
+                "rule" : {
+                  "type" : "random_integer",
+                  "min" : 0,
+                  "max" : 10
+                }
+              }
+            }
+          } ]
+        },
+        "CP" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CP",
+            "name" : "CP",
+            "description" : "Context provider's ID"
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "VC4"
+          }
+        },
+        "context_generation_ts" : {
+          "type" : "number",
+          "metadata" : {
+            "format" : "milliseconds",
+            "position" : "context_generation_ts",
+            "name" : "context_generation_ts",
+            "description" : "timestamp ",
+            "type" : "timestamp"
+          },
+          "rule" : {
+            "type" : "current_time",
+            "metric" : "milliseconds",
+            "shift" : 0
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}

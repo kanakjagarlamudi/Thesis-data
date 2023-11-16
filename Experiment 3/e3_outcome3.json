@@ -1,0 +1,193 @@
+{
+  "id" : "65557adbadbe1d0007dcc8a8",
+  "modified" : 1700100827,
+  "name" : "E3_Outcome3",
+  "dataDefinition" : {
+    "id" : "655569a9adbe1d0007dcc89f",
+    "modified" : 1700100638,
+    "name" : "E3_outcome_schema ",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Entity" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Entity",
+            "description" : ""
+          }
+        },
+        "CPID" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CPID",
+            "name" : "CPID",
+            "description" : "Context provider's ID"
+          }
+        },
+        "Context Attributes" : {
+          "properties" : {
+            "Ca1" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "Ca1",
+                "name" : "Crowd Density",
+                "description" : "guaranteed context attribute "
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Context Attributes",
+            "description" : ""
+          }
+        },
+        "QoS_Rt" : {
+          "type" : "number",
+          "metadata" : {
+            "format" : "seconds",
+            "position" : "QoS_Rt",
+            "name" : "QoS_rt",
+            "description" : "used to measure the context responses time ",
+            "type" : "timestamp"
+          }
+        },
+        "QoC parameters " : {
+          "properties" : {
+            "QoC_ts" : {
+              "type" : "number",
+              "metadata" : {
+                "format" : "seconds",
+                "position" : "QoC_ts",
+                "name" : "QoC_ts",
+                "description" : "used to measure the QoC metric timeliness ",
+                "type" : "timestamp"
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC parameters ",
+            "description" : ""
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 50
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Entity" : {
+          "rule" : {
+            "type" : "custom_function",
+            "function" : "/**\r\n *\r\n * Please, note the following information:\r\n * - to print information to docker console use \"print\" (console.log is not available)\r\n * - \"momentjs\" and \"lodash\" libraries are supported and available in global scope\r\n *\r\n * @param  {object} ruleState may be used to store information between iterations\r\n * @param  {object} sessionState may be used to store information between rules\r\n * @param  {string} deviceName device name\r\n * @return {string} value that will be populated to specified property\r\n */\r\nfunction custom(ruleState, sessionState, deviceName) {\r\n    return {};\r\n}"
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Entity",
+            "description" : ""
+          }
+        },
+        "CPID" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CPID",
+            "name" : "CPID",
+            "description" : "Context provider's ID"
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "CP3"
+          }
+        },
+        "Context Attributes" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Context Attributes",
+            "description" : ""
+          },
+          "properties" : {
+            "Ca1" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "Ca1",
+                "name" : "Crowd Density",
+                "description" : "guaranteed context attribute "
+              },
+              "rule" : {
+                "type" : "random_integer",
+                "min" : 0,
+                "max" : 100
+              }
+            }
+          }
+        },
+        "QoS_Rt" : {
+          "type" : "number",
+          "metadata" : {
+            "format" : "seconds",
+            "position" : "QoS_Rt",
+            "name" : "QoS_rt",
+            "description" : "used to measure the context responses time ",
+            "type" : "timestamp"
+          },
+          "rule" : {
+            "type" : "current_time",
+            "metric" : "milliseconds",
+            "shift" : 0
+          }
+        },
+        "QoC parameters " : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC parameters ",
+            "description" : ""
+          },
+          "properties" : {
+            "QoC_ts" : {
+              "type" : "number",
+              "metadata" : {
+                "format" : "seconds",
+                "position" : "QoC_ts",
+                "name" : "QoC_ts",
+                "description" : "used to measure the QoC metric timeliness ",
+                "type" : "timestamp"
+              },
+              "rule" : {
+                "type" : "current_time",
+                "metric" : "milliseconds",
+                "shift" : 0
+              }
+            }
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}

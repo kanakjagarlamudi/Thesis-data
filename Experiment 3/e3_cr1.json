@@ -1,0 +1,222 @@
+{
+  "id" : "65557389adbe1d0007dcc8a0",
+  "modified" : 1700098953,
+  "name" : "E3_CR1",
+  "dataDefinition" : {
+    "id" : "655567ebadbe1d0007dcc89e",
+    "modified" : 1700098758,
+    "name" : "E3_CR_Schema",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Entity" : {
+          "properties" : {
+            "Type" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Type",
+                "name" : "Type",
+                "description" : "Entity's Type"
+              }
+            },
+            "Latitude" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Latitude",
+                "name" : "Latitude",
+                "description" : "Latitude Position of the entity"
+              }
+            },
+            "Longitude" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Longitude",
+                "name" : "Longitude",
+                "description" : "Longitude position of the enitity"
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Entity",
+            "description" : ""
+          }
+        },
+        "QoC requirements " : {
+          "properties" : {
+            "timeliness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "timeliness",
+                "name" : "timeliness ",
+                "description" : "timeliness as the QoC guarantee "
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC requirements ",
+            "description" : ""
+          }
+        },
+        "CCID" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CCID",
+            "name" : "CCID",
+            "description" : "Context consumer's ID"
+          }
+        },
+        "Context Attributes" : {
+          "properties" : {
+            "Ca1" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Ca1",
+                "name" : "Ca1",
+                "description" : "guaranteed context attribute "
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Context Attributes",
+            "description" : ""
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 60
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Entity" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Entity",
+            "description" : ""
+          },
+          "properties" : {
+            "Type" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Type",
+                "name" : "Type",
+                "description" : "Entity's Type"
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "Beach"
+              }
+            },
+            "Latitude" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Latitude",
+                "name" : "Latitude",
+                "description" : "Latitude Position of the entity"
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "-37.915886"
+              }
+            },
+            "Longitude" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Longitude",
+                "name" : "Longitude",
+                "description" : "Longitude position of the enitity"
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "144.986245"
+              }
+            }
+          }
+        },
+        "QoC requirements " : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC requirements ",
+            "description" : ""
+          },
+          "properties" : {
+            "timeliness" : {
+              "type" : "number",
+              "metadata" : {
+                "type" : "integer",
+                "position" : "timeliness",
+                "name" : "timeliness ",
+                "description" : "timeliness as the QoC guarantee "
+              },
+              "rule" : {
+                "type" : "literal_integer",
+                "value" : 8
+              }
+            }
+          }
+        },
+        "CCID" : {
+          "type" : "string",
+          "metadata" : {
+            "position" : "CCID",
+            "name" : "CCID",
+            "description" : "Context consumer's ID"
+          },
+          "rule" : {
+            "type" : "literal_string",
+            "value" : "SLS1"
+          }
+        },
+        "Context Attributes" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Context Attributes",
+            "description" : ""
+          },
+          "properties" : {
+            "Ca1" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Ca1",
+                "name" : "Ca1",
+                "description" : "guaranteed context attribute "
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "Crowd Density"
+              }
+            }
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}

@@ -1,0 +1,476 @@
+{
+  "id" : "6551620dadbe1d0008b564d9",
+  "modified" : 1699832728,
+  "name" : "E1_TC_SLA",
+  "dataDefinition" : {
+    "id" : "655082f9adbe1d0009af389d",
+    "modified" : 1699831953,
+    "name" : "E1_SLA",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Service description " : {
+          "properties" : {
+            "Entity" : {
+              "properties" : {
+                "Type" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Type",
+                    "name" : "Type",
+                    "description" : "Type of entity "
+                  }
+                },
+                "Latitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Latitude",
+                    "name" : "Latitude",
+                    "description" : "Latitude of the entity "
+                  }
+                },
+                "Longitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Longitude",
+                    "name" : "Longitude ",
+                    "description" : "Longitude of the entity "
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "Entity",
+                "description" : ""
+              }
+            },
+            "Context attributes " : {
+              "items" : [ {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "Name of the first context attribute"
+                }
+              }, {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "Name of the second context attribute "
+                }
+              } ],
+              "type" : "array",
+              "metadata" : {
+                "position" : "Context attributes ",
+                "description" : ""
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Service description ",
+            "description" : ""
+          }
+        },
+        "QoC and CoC" : {
+          "properties" : {
+            "QoC gaurantees " : {
+              "properties" : {
+                "timneliness" : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "timneliness",
+                    "name" : "timeliness",
+                    "description" : "timeliness guarantee "
+                  }
+                },
+                "completeness " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "completeness ",
+                    "name" : "completeness",
+                    "description" : "completeness gautantee"
+                  }
+                },
+                "Representation" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Representation",
+                    "name" : "Representation ",
+                    "description" : "Data representation format guarantee "
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "QoC gaurantees ",
+                "description" : ""
+              }
+            },
+            "CoC guarantees " : {
+              "properties" : {
+                "Cost " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "Cost ",
+                    "name" : "Cost",
+                    "description" : "Context cost "
+                  }
+                },
+                "Penalties " : {
+                  "properties" : {
+                    "Completeness_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Completeness_Penalty",
+                        "name" : "Completeness_Penalty",
+                        "description" : "Completeness_Penalty"
+                      }
+                    },
+                    "Representation_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Representation_Penalty",
+                        "name" : "Representation_Penalty",
+                        "description" : "Representation_Penalty"
+                      }
+                    },
+                    "Timeliness_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Timeliness_Penalty",
+                        "name" : "Timeliness_Penalty",
+                        "description" : "Timeliness_Penalty"
+                      }
+                    }
+                  },
+                  "type" : "object",
+                  "metadata" : {
+                    "position" : "Penalties ",
+                    "description" : ""
+                  }
+                }
+              },
+              "type" : "object",
+              "metadata" : {
+                "position" : "CoC guarantees ",
+                "description" : ""
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC and CoC",
+            "description" : ""
+          }
+        },
+        "Actors" : {
+          "properties" : {
+            "CMP" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "CMP",
+                "name" : "CMP",
+                "description" : "CMP's name"
+              }
+            },
+            "Context Provider" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Context Provider",
+                "name" : "Context Provider",
+                "description" : "Context Provider's name "
+              }
+            }
+          },
+          "type" : "object",
+          "metadata" : {
+            "position" : "Actors",
+            "description" : ""
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "timer" : {
+    "type" : "interval",
+    "metric" : "seconds",
+    "value" : 60
+  },
+  "ticksNumber" : 0,
+  "isReplayLooped" : false,
+  "devices" : [ ],
+  "generator" : {
+    "type" : "schema_based",
+    "schema" : {
+      "metadata" : {
+        "type" : "json"
+      },
+      "type" : "object",
+      "properties" : {
+        "Service description " : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Service description ",
+            "description" : ""
+          },
+          "properties" : {
+            "Entity" : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "Entity",
+                "description" : ""
+              },
+              "properties" : {
+                "Type" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Type",
+                    "name" : "Type",
+                    "description" : "Type of entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "School Crossing"
+                  }
+                },
+                "Latitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Latitude",
+                    "name" : "Latitude",
+                    "description" : "Latitude of the entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "-37.845103"
+                  }
+                },
+                "Longitude" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Longitude",
+                    "name" : "Longitude ",
+                    "description" : "Longitude of the entity "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "145.109798"
+                  }
+                }
+              }
+            },
+            "Context attributes " : {
+              "type" : "array",
+              "metadata" : {
+                "position" : "Context attributes ",
+                "description" : ""
+              },
+              "items" : [ {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "1",
+                  "name" : "Ca1",
+                  "description" : "Name of the first context attribute"
+                },
+                "rule" : {
+                  "type" : "literal_string",
+                  "value" : "Count of people at crossing"
+                }
+              }, {
+                "type" : "string",
+                "metadata" : {
+                  "position" : "2",
+                  "name" : "Ca2",
+                  "description" : "Name of the second context attribute "
+                },
+                "rule" : {
+                  "type" : "literal_string",
+                  "value" : "Count of people waiting"
+                }
+              } ]
+            }
+          }
+        },
+        "QoC and CoC" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "QoC and CoC",
+            "description" : ""
+          },
+          "properties" : {
+            "QoC gaurantees " : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "QoC gaurantees ",
+                "description" : ""
+              },
+              "properties" : {
+                "timneliness" : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "timneliness",
+                    "name" : "timeliness",
+                    "description" : "timeliness guarantee "
+                  },
+                  "rule" : {
+                    "type" : "literal_integer",
+                    "value" : 6
+                  }
+                },
+                "completeness " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "completeness ",
+                    "name" : "completeness",
+                    "description" : "completeness gautantee"
+                  },
+                  "rule" : {
+                    "type" : "literal_integer",
+                    "value" : 2
+                  }
+                },
+                "Representation" : {
+                  "type" : "string",
+                  "metadata" : {
+                    "position" : "Representation",
+                    "name" : "Representation ",
+                    "description" : "Data representation format guarantee "
+                  },
+                  "rule" : {
+                    "type" : "literal_string",
+                    "value" : "JSON"
+                  }
+                }
+              }
+            },
+            "CoC guarantees " : {
+              "type" : "object",
+              "metadata" : {
+                "position" : "CoC guarantees ",
+                "description" : ""
+              },
+              "properties" : {
+                "Cost " : {
+                  "type" : "number",
+                  "metadata" : {
+                    "type" : "integer",
+                    "position" : "Cost ",
+                    "name" : "Cost",
+                    "description" : "Context cost "
+                  },
+                  "rule" : {
+                    "type" : "literal_integer",
+                    "value" : 10
+                  }
+                },
+                "Penalties " : {
+                  "type" : "object",
+                  "metadata" : {
+                    "position" : "Penalties ",
+                    "description" : ""
+                  },
+                  "properties" : {
+                    "Completeness_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Completeness_Penalty",
+                        "name" : "Completeness_Penalty",
+                        "description" : "Completeness_Penalty"
+                      },
+                      "rule" : {
+                        "type" : "literal_integer",
+                        "value" : 50
+                      }
+                    },
+                    "Representation_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Representation_Penalty",
+                        "name" : "Representation_Penalty",
+                        "description" : "Representation_Penalty"
+                      },
+                      "rule" : {
+                        "type" : "literal_integer",
+                        "value" : 50
+                      }
+                    },
+                    "Timeliness_Penalty" : {
+                      "type" : "number",
+                      "metadata" : {
+                        "type" : "integer",
+                        "position" : "Timeliness_Penalty",
+                        "name" : "Timeliness_Penalty",
+                        "description" : "Timeliness_Penalty"
+                      },
+                      "rule" : {
+                        "type" : "literal_integer",
+                        "value" : 8
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Actors" : {
+          "type" : "object",
+          "metadata" : {
+            "position" : "Actors",
+            "description" : ""
+          },
+          "properties" : {
+            "CMP" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "CMP",
+                "name" : "CMP",
+                "description" : "CMP's name"
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "CoaaS"
+              }
+            },
+            "Context Provider" : {
+              "type" : "string",
+              "metadata" : {
+                "position" : "Context Provider",
+                "name" : "Context Provider",
+                "description" : "Context Provider's name "
+              },
+              "rule" : {
+                "type" : "literal_string",
+                "value" : "TC"
+              }
+            }
+          }
+        }
+      },
+      "schemaKey" : "http://json-schema.org/draft-04/schema#"
+    }
+  },
+  "targetSystem" : {
+    "id" : "5a4223da85b4b900050e7474",
+    "modified" : 1607744254,
+    "name" : "Dummy",
+    "type" : "dummy"
+  },
+  "replayLooped" : false
+}
